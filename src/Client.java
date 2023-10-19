@@ -27,7 +27,7 @@ public class Client {
         DatagramPacket receivingPacket = new DatagramPacket(receivingDataBuffer,receivingDataBuffer.length);
         clientSocket.receive(receivingPacket);
         String recieve = new String(receivingPacket.getData());
-        System.out.println("Server send: " + recieve);
+        System.out.println("Server send: " + recieve.trim());
         clientSocket.close();;
     }
 }
